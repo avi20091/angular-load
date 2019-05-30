@@ -7,11 +7,11 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class CountriesComponent{
   private result:any;
-  private countriesSubscribe:any;
-  constructor(private _service:CountriesService){}
-  ngOnInit(){
-    this.countriesSubscribe=this._service.getCountries().subscribe(this._successCallBack,this._errorCallBack);
+  //private countriesSubscribe:any;
+  constructor(private _service:CountriesService){
+    this._service.getCountries().subscribe(this._successCallBack,this._errorCallBack);
   }
+ 
   public _successCallBack=(res)=>{
     this.result=res;
   }
@@ -22,7 +22,5 @@ export class CountriesComponent{
       console.log("Client Side Error...!!!")
     }
   }
-  ngOnDestroy(){
-    this.countriesSubscribe.unsubscribe();
-  }
+  
 }
