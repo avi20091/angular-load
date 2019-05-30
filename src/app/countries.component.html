@@ -1,9 +1,10 @@
-<table>
-  <thead>
+<table border="1" cellpadding="10px" cellspacing="10px" alien="center" style="tex-align:center;font-size:30px;">
+  <thead style="background:gray;">
     <tr>
       <th>Name</th>
       <th>Capital</th>
       <th>Region</th>
+      <th>Flag</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +12,7 @@
       <td>{{x.name}}</td>
       <td>{{x.capital}}</td>
       <td>{{x.region}}</td>
+      <td><img width="100px" src="{{x.flag}}"></td>
     </tr>
   </tbody>
 </table>

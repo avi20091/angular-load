@@ -9,8 +9,8 @@ import { CountriesComponent } from './countries.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,HttpClientModule, CommonModule ],
   declarations: [ AppComponent, HelloComponent, CountriesComponent ],
+  imports:      [ BrowserModule, FormsModule,HttpClientModule, CommonModule ],
   providers: [ CountriesService ],
   bootstrap:    [ CountriesComponent ]
 })
